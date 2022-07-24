@@ -5,28 +5,17 @@ const { Post, Comment, User } = require('../models/');
 router.get('/', async (req, res) => {
   try {
     // we need to get all Posts and include the User for each (change lines 8 and 9)
-    const postData = await Post.someSequelizeMethod({
-      include: [
-      {
-        model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-        include: {
-          model: User,
-          attributes: ['username']
-        }
-      },
-      {
+    const postData = await Post.findAll({
+      include: [{
         model: User,
-        attributes: ['username']
-      }
-    ],
+        attributes: ['username'],
+      }],
     });
     // serialize the data
     const posts = postData.map((post) => post.get({ plain: true }));
- 
-    res.render('all-posts', { 
-        layout: 'main',
-        post });
+    // we should render all the posts here
+    res.render('all-posts', { posts, 
+        logged_in: req.session.logged_in,});
   } catch (err) {
     res.status(500).json(err);
   }
@@ -37,7 +26,6 @@ router.get('/post/:id', async (req, res) => {
   try {
     // what should we pass here? we need to get some data passed via the request body (something.something.id?)
     // change the model below, but not the findByPk method.
-    
     const postData = await Post.findByPk(req.params.id, {
       // helping you out with the include here, no changes necessary
       include: [
