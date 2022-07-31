@@ -41,7 +41,7 @@ There is also the option to edit and comment on posts.
 
 ![SCREENSHOOT](https://github.com/btking1/Tech-Talk-blog/blob/main/img/the-tech-blog.jpg)
 
-[WALKTHROUGH](https://www.youtube.com/watch?v=2X5GulkRHSw)
+[Tech Talk](https://tech-talk-mvc.herokuapp.com/dashboard)
 
 <p>&nbsp;</p>
 
