@@ -1,4 +1,4 @@
-# MVC Tech-Talk blog
+# MVC Tech Talk blog
 ![contributors-shield](https://img.shields.io/github/contributors/btking1/README-Generator?style=for-the-badge)
 ![forks-shield](https://img.shields.io/github/forks/btking1/README-Generator?style=for-the-badge)
 ![stars-shield](https://img.shields.io/github/stars/btking1/README-Generator?style=for-the-badge)
