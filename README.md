@@ -11,28 +11,35 @@
 
 ## Description
    
-Using the Employee Database Management application, a business is able to manage the employees more efficiently and effectively.
-The company structure is organized into a database according to department, role, and employee in order 
-to accomplish this goal.
+This is a website that has been designed for tech enthusiasts and people who are looking for the latest innovations 
+in the field of technology. In order to create an account, users need to supply their username, email address,
+and password when signing up. They then have access to the tech blog 
+where they can share the latest news articles with their readers.   
 
-    - Built with: 
+       ~~ Built with ~~ 
+       
         * JavaScript
         * Node JS
         * SQL
+        * HTML 
+        * CSS
+        * Handbars
+        * Express
         
 <p>&nbsp;</p>
 
 ## Usage
 
-The first step is to clone and install the application as well as its dependencies via git clone and npm init, respectively. 
-Use npm start to start the application! 
-The company's employee database may be to added, viewed, or updated by users.
+You will need to sign up first before you can get started, or if you already have an account then you can login.
+Afterwards you will be able to view all posts from the homepage. If you want to make your own post, head over to the dashboard 
+and select the new post button (note that you can also see the post you made here).
+There is also the option to edit and comment on posts.
 
 
 <p>&nbsp;</p>
 
 
-![SCREENSHOOT](https://github.com/btking1/Employee-Tracker/blob/main/Main-Menu.jpg)
+![SCREENSHOOT](https://github.com/btking1/Tech-Talk-blog/blob/main/img/the-tech-blog.jpg)
 
 [WALKTHROUGH](https://www.youtube.com/watch?v=2X5GulkRHSw)
 
