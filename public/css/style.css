@@ -184,6 +184,12 @@ input {
   padding: 1%;
 }
 
+#post-date{
+  font-size: 0.8rem;
+  float: right;
+  margin-right: 3%;
+}
+
 /* FORM */
 .form-label,
 .form-input,
@@ -205,6 +211,14 @@ input {
   border-radius: var(--border-radius);
 }
 
+
+#post-body-cont{
+  display:block;
+}
+
+.new-comment-form{
+  margin-top: 2%;
+}
 /* HEIGHT / WIDTH UTILS */
 .min-100-vh {
   min-height: 100vh;
@@ -518,3 +532,4 @@ input {
     flex: 0 0 100%;
   }
 }
+

@@ -1,16 +1,31 @@
-<div class="container">
-    {{#each this.posts }}
-    <div class="row">
-        <div class="card col-12 col-sm-12 m-2 clickableBlogPost" data-id="{{ id }}">
-            <div class="card-header">
-                <span class="float-start"> {{ title }} </span>
-                <span class="float-end"> Posted by {{ user.username }} on {{ dateStringForPost }} </span>
-            </div>
-            <div class="card-body">
-                <p class="card-text">{{contents}}</p>
-            </div>
-        </div>
-    </div>
-    {{/each}}
+{{#if posts.length}}
+{{#each posts as |post|}}
+<div class="card">
+  <div class="card-header">
+    {{title}}
+
+    <span id="post-date">
+      {{format_date createdAt}}
+    </span>
+  </div>
+
+  <div class="card-body">
+    <p>{{description}}</p>
+
+    <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+  </div>
 </div>
-{{!-- <script src="/js/comment.js"></script> --}}
+
+{{!-- <article class="post">
+  <div class="title">
+    <a href="/" target="_blank">{{title}}</a>
+    <span>({{description}})</span>
+  </div>
+  <div class="meta">
+    {{user.username}} on {{format_date created_at}}
+    |
+    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+  </div>
+</article> --}}
+{{/each}}
+{{/if}}

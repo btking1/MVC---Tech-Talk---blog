@@ -2,7 +2,7 @@ const signupFormHandler = async function (event) {
   event.preventDefault();
 
   const usernameEl = document.querySelector("#username-input-signup");
-  const emailEl = document.querySelector("#email")
+  const emailEl = document.querySelector("#email-input-signup");
 
   const passwordEl = document.querySelector("#password-input-signup");
 
@@ -16,13 +16,12 @@ const signupFormHandler = async function (event) {
     }),
     headers: { "Content-Type": "application/json" },
   });
-  console.log(emailEl);
-
   if (response.ok) {
     document.location.replace("/dashboard");
   } else {
     alert("Failed to sign up");
   }
+  console.log(response)
 };
 
 document

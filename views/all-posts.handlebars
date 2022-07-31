@@ -1,15 +1,21 @@
-{{#each posts}}
-<div class="card m-1">
-    <div class="card-body">
-        <h5 class="card-title">{{ title }}</h5>
-        <p class="card-text">{{description}}</p> 
-        <p class=" card-text">Posted by {{ user.username }} on {{ date_created}}</p>
-        {{!-- <a href="/posts/{{ id }}" class="btn btn-primary">Read More</a> --}}
+
+
+{{#each posts }}
+<div class="card">
+    <div class="card-header">
+      {{ title }}
+
+        <span id="post-date">
+            {{ format_date  createdAt }}
+        </span>
     </div>
+
+       
+    <div class="card-body">
+        <p>{{description }}</p>
+
+    </div>
+
+
 </div>
 {{/each}}
-
-
-
-
-

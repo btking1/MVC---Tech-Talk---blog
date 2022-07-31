@@ -8,7 +8,6 @@ router.post("/", async (req, res) => {
       email: req.body.email,
       password: req.body.password,
     });
-
     req.session.save(() => {
       req.session.userId = newUser.id;
       req.session.email = newUser.email;
@@ -19,6 +18,7 @@ router.post("/", async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+  console.log(req.body);
 });
 
 router.post("/login", async (req, res) => {
